@@ -1,2 +1,2 @@
 # web-2022-2023
-Solovyeva Anastasia MK-11
+Соловьева Анастасия МК-11
