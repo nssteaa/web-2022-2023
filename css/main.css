@@ -1,0 +1,179 @@
+.top-block
+{
+    background: url(../images/Скалы-голова-сайта.jpg) #000000; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1440px;
+    height: 500px;
+}
+
+.top-block__logotype_white
+{
+    font-size: 26px;
+    font-weight: 400;
+    font-family: "Lora" serif;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.top-block__item_white
+{
+    font-size: 12px;
+    font-family: "Oxygen", sans-serif;
+    line-height: 1.7;
+    color: #ffffff;
+    text-decoration: 0;
+}
+
+.top-block__title
+{
+    font-size: 50px;
+    font-weight: 400;
+    font-family: "Lora" serif;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.top-block__text
+{
+    font-size: 17px;
+    font-family: "Oxygen", sans-serief;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.63);
+}
+
+.top-block__button
+{
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Oxygen", sans-serif;
+    line-height: 1.5;
+    color: #ffffff;
+    background-color: #dd783f;
+    border-radius: 3px;
+    border-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.submenu__item
+{
+    font-size: 14px;
+    font-family: "Lora", serif;
+    line-height: 1.4;
+    color: #768088;
+    text-decoration: 0;
+}
+
+.main-block__name
+{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Oxygen", sans-serif;
+    line-height: 1.35;
+    color: #2e2e2e;
+}
+
+.main-block__title
+{
+    font-size: 27px;
+    font-family: 400;
+    font-family: "Lora", serif;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.main-block__text
+{
+    font-size: 14px;
+    font-family: "Oxygen", sans-serif;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.main-block__caption
+{
+    font-size: 12px;
+    font-family: "Oxygen", sans-serif;
+    line-height: 2.9;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.main-block__section
+{
+    font-size: 12px;
+    font-family: "Oxygen", sans-serif;
+    line-height: 2.9;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #dd783f;
+    border-radius: 2px;
+    border-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.main-block__title
+{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Lora", serif;
+    line-height: 1.3;
+    color: #101315;
+}
+
+.main-block__text
+{
+    font-size: 13px;
+    font-family: "Oxygen",sans-serif;
+    line-height: 1.46;
+    color: #7a7a7a;
+}
+
+.main-block__caption
+{
+    font-size: 12px;
+    font-family: "Oxygen", sans-serif;
+    line-height: 2.9;
+    color: #999999;
+}
+
+.low-block
+{
+    background: url(../images/Конец-сайта-footer.jpg) #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.low-block__logotype_white
+{
+    font-size: 26px;
+    font-weight: 400;
+    font-family: "Lora", serif;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.low-block__item_white
+{
+    font-size: 12px;
+    font-family: "Oxygen", sans-serif;
+    line-height: 1.7;
+    color: #ffffff;
+    text-decoration: 0;
+}
+
+.main-block__headline
+{
+    font: 400 16px/1.3 "Lora";
+    color: #101315;
+}
+
+.main-block__description
+{
+    font-size: 400 13px/1.46 "Oxygen";
+}
