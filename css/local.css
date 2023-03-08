@@ -1,67 +1,44 @@
-.top-block__logotype
+.menu__logotype_color
 {
-    font-size: 26px;
-    font-weight: 400;
-    font-family: "Lora" serif;
-    line-height: 1;
     color: #2e2e2e;
 }
 
-.top-block__item
+.menu__item_color
 {
-    font-size: 12px;
-    font-family: "Oxygen", sans-serif;
-    line-height: 1.7;
     color: #2e2e2e;
     text-decoration: 0;
 }
 
-.top-block__title
+.content__title
 {
-    font-size: 50px;
-    font-weight: 400;
-    font-family: "Lora" serif;
-    line-height: 1;
+    font: 400 50px/1 "Lora";
     color: #2e2e2e;
 }
 
-.top-block__text
+.content__text
 {
-    font-size: 17px;
-    font-family: "Oxygen", sans-serief;
-    line-height: 1.18;
+    font: 17px/1.18 "Oxygen";
     color: rgba(46, 46, 46, 0.63);
 }
 
 .article-text
 {
-    font-size: 24px;
-    font-family: "Oxygen", sans-serif;
-    line-height: 1.46;
+    font: 24px/1.46 "Oxygen";
     color: #101315;
 }
 
 .low-block
 {
-    background: url(../images/Конец-сайта-footer.jpg) #000000;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #000000 center/cover no-repeat url(../images/Конец-сайта-footer.jpg);
 }
 
-.low-block__logotype_white
+.menu__logotype_with-background
 {
-    font-size: 26px;
-    font-weight: 400;
-    font-family: "Lora", serif;
-    line-height: 1;
     color: #ffffff;
 }
 
-.low-block__item_white
+.menu__item_with-background
 {
-    font-size: 12px;
-    font-family: "Oxygen", sans-serif;
-    line-height: 1.7;
     color: #ffffff;
     text-decoration: 0;
 }

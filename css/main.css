@@ -1,179 +1,124 @@
+.main
+{
+    background-color: #7a7a7a;
+}
+
 .top-block
 {
-    background: url(../images/Скалы-голова-сайта.jpg) #000000; 
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #000000 center/cover no-repeat url(../images/Скалы-голова-сайта.jpg); 
     width: 1440px;
     height: 500px;
 }
 
-.top-block__logotype_white
+.menu__logotype
 {
-    font-size: 26px;
-    font-weight: 400;
-    font-family: "Lora" serif;
-    line-height: 1;
+    font: 400 26px/1 "Lora" serif;
     color: #ffffff;
 }
 
-.top-block__item_white
+.menu__item
 {
-    font-size: 12px;
-    font-family: "Oxygen", sans-serif;
-    line-height: 1.7;
+    font: 12px/1.7 "Oxygen";
     color: #ffffff;
     text-decoration: 0;
 }
 
-.top-block__title
+.content__title
 {
-    font-size: 50px;
-    font-weight: 400;
-    font-family: "Lora" serif;
-    line-height: 1;
+    font: 400 50px/1 "Lora";
     color: #ffffff;
 }
 
-.top-block__text
+.content__text
 {
-    font-size: 17px;
-    font-family: "Oxygen", sans-serief;
-    line-height: 1.5;
+    font: 17px/1.5 "Oxygen";
     color: rgba(255, 255, 255, 0.63);
 }
 
-.top-block__button
+.content__button
 {
-    font-size: 13px;
-    font-weight: 400;
-    font-family: "Oxygen", sans-serif;
-    line-height: 1.5;
+    font: 400 13px/1.5 "Oxygen";
     color: #ffffff;
     background-color: #dd783f;
-    border-radius: 3px;
-    border-style: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    
+    border: 3px none;
+    padding: 10px 20px;   
 }
 
 .submenu__item
 {
-    font-size: 14px;
-    font-family: "Lora", serif;
-    line-height: 1.4;
+    font: 14px/1.4 "Lora";
     color: #768088;
     text-decoration: 0;
 }
 
-.main-block__name
+.main-head__name
 {
-    font-size: 20px;
-    font-weight: 400;
-    font-family: "Oxygen", sans-serif;
-    line-height: 1.35;
+    font: 400 20px/1.35 "Oxygen";
     color: #2e2e2e;
 }
 
-.main-block__title
+.post__title
 {
-    font-size: 27px;
-    font-family: 400;
-    font-family: "Lora", serif;
-    line-height: 1.1;
+    font: 400 27px/1.1 "Lora";
     color: #ffffff;
 }
 
-.main-block__text
+.post__text
 {
-    font-size: 14px;
-    font-family: "Oxygen", sans-serif;
-    line-height: 1.8;
+    font: 14px/1.8 "Oxygen";
     color: rgba(255, 255, 255, 0.7);
 }
 
-.main-block__caption
+.post__caption
 {
-    font-size: 12px;
-    font-family: "Oxygen", sans-serif;
-    line-height: 2.9;
+    font: 12px/2.9 "Oxygen";
     color: rgba(255, 255, 255, 0.7);
 }
 
-.main-block__section
+.post__section
 {
-    font-size: 12px;
-    font-family: "Oxygen", sans-serif;
-    line-height: 2.9;
+    font: 12px/2.9 "Oxygen";
     color: rgba(255, 255, 255, 0.7);
     background-color: #dd783f;
-    border-radius: 2px;
-    border-style: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    border: 2px none;
+    padding: 10px 10px;
 }
 
-.main-block__title
-{
-    font-size: 16px;
-    font-weight: 400;
-    font-family: "Lora", serif;
-    line-height: 1.3;
-    color: #101315;
-}
-
-.main-block__text
-{
-    font-size: 13px;
-    font-family: "Oxygen",sans-serif;
-    line-height: 1.46;
-    color: #7a7a7a;
-}
-
-.main-block__caption
-{
-    font-size: 12px;
-    font-family: "Oxygen", sans-serif;
-    line-height: 2.9;
-    color: #999999;
-}
-
-.low-block
-{
-    background: url(../images/Конец-сайта-footer.jpg) #000000;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.low-block__logotype_white
-{
-    font-size: 26px;
-    font-weight: 400;
-    font-family: "Lora", serif;
-    line-height: 1;
-    color: #ffffff;
-}
-
-.low-block__item_white
-{
-    font-size: 12px;
-    font-family: "Oxygen", sans-serif;
-    line-height: 1.7;
-    color: #ffffff;
-    text-decoration: 0;
-}
-
-.main-block__headline
+.post-item__headline
 {
     font: 400 16px/1.3 "Lora";
     color: #101315;
 }
 
-.main-block__description
+.post-item__description
 {
-    font-size: 400 13px/1.46 "Oxygen";
+    font: 13px/1.46 "Oxygen";
+    color: #7a7a7a;
+}
+
+.post-item__caption
+{
+    font: 12px/2.9 "Oxygen";
+    color: #999999;
+}
+
+.low-block
+{
+    background: #000000 url(../images/Конец-сайта-footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu__logotype
+{
+    font: 400 26px/1 "Lora";
+    color: #ffffff;
+    text-decoration: 0;
+}
+
+.menu__item
+{
+    font: 12px/1.7 "Oxygen";
+    color: #ffffff;
+    text-decoration: 0;
 }
