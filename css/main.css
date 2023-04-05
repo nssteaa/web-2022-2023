@@ -1,18 +1,31 @@
-.main
-{
-    background-color: #7a7a7a;
-}
-
 .top-block
 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #000000 center/cover no-repeat url(../images/Скалы-голова-сайта.jpg); 
-    width: 1440px;
+    width: 100%;
     height: 500px;
+    text-align: center;
+}
+
+body
+{
+    margin: 0;
+}
+
+.menu 
+{
+    width: 940px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    margin: 20px 0 0 0;
 }
 
 .menu__logotype
 {
-    font: 400 26px/1 "Lora" serif;
+    font: 400 26px/1 "Lora";
     color: #ffffff;
 }
 
@@ -21,27 +34,39 @@
     font: 12px/1.7 "Oxygen";
     color: #ffffff;
     text-decoration: 0;
+    padding: 10px 20px;
 }
 
-.content__title
+.content-title
 {
     font: 400 50px/1 "Lora";
     color: #ffffff;
+    margin: 120px 0 0 0;
 }
 
-.content__text
+.content-text
 {
     font: 17px/1.5 "Oxygen";
     color: rgba(255, 255, 255, 0.63);
+    margin: 20px 0 0 0;
 }
 
-.content__button
+.content-button
 {
     font: 400 13px/1.5 "Oxygen";
     color: #ffffff;
     background-color: #dd783f;
     border: 3px none;
-    padding: 10px 20px;   
+    padding: 10px 20px;  
+    margin: 31px 0 0 0; 
+}
+
+.submenu
+{
+    display: flex;
+    gap: 21;
+    justify-content: center;
+    align-items: center;
 }
 
 .submenu__item
@@ -49,12 +74,91 @@
     font: 14px/1.4 "Lora";
     color: #768088;
     text-decoration: 0;
+    width: 139px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.main-head__name
+.main
+{
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.main-featured-post__name
 {
     font: 400 20px/1.35 "Oxygen";
     color: #2e2e2e;
+    margin-top: 60px;
+    text-align: center;
+    flex-basis: 100%;
+    flex-shrink: 0;
+}
+
+.main-most-recent__name
+{
+    font: 400 20px/1.35 "Oxygen";
+    color: #2e2e2e;
+    margin-top: 60px;
+    text-align: center;
+    flex-basis: 100%;
+    flex-shrink: 0;
+}
+
+.main-most-recent
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 940px;
+    gap: 24px;
+}
+
+.main-featured-post
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+.post
+{
+background: url(../images/Северное-сияние.jpg);
+background-size: cover;
+height: 280px;
+width: 460px;
+border-radius: 3px;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+padding: 0 20px 20px 20px;
+position: relative;
+}
+
+.post__text
+{
+    margin-top: 6px;
+}
+
+.post__title
+{
+    margin-bottom: 0;
+}
+
+.post_second
+{
+background: url(../images/Небесные-фонарики.jpg);
+background-size: cover;
 }
 
 .post__title
@@ -69,44 +173,76 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
-.post__caption
+.article-caption
 {
     font: 12px/2.9 "Oxygen";
     color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    width: 420px;
+    align-items: center;
+}
+
+.article-caption__photo
+{
+    width: 26px;
+    height: 26px;
 }
 
 .post__section
 {
-    font: 12px/2.9 "Oxygen";
+    font: 400 12px/1.08 "Oxygen";
     color: rgba(255, 255, 255, 0.7);
     background-color: #dd783f;
     border: 2px none;
-    padding: 10px 10px;
+    padding: 6px 9px 7px;
+    border-radius: 2px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+}
+
+.article-caption__author
+{
+    flex-grow: 1;
+    margin-left: 10px;
 }
 
 .post-item__headline
 {
     font: 400 16px/1.3 "Lora";
     color: #101315;
+    margin: 0;
+    padding: 0 13px;
+    margin: 14px 0 6px;
 }
 
 .post-item__description
 {
     font: 13px/1.46 "Oxygen";
     color: #7a7a7a;
+    margin: 0;
+    flex-grow: 1;
+    padding: 0 13px;
+    margin: 0;
 }
 
-.post-item__caption
+.menu
 {
-    font: 12px/2.9 "Oxygen";
-    color: #999999;
-}
-
-.low-block
-{
-    background: #000000 url(../images/Конец-сайта-footer.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.menu_with-background
+{
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 0 0 100vw rgba(35, 47, 56, .6);
+    width: 100%;
+    background: rgba(35, 47, 56, 0.6);
+    padding: 31px 250px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box
 }
 
 .menu__logotype
@@ -122,3 +258,117 @@
     color: #ffffff;
     text-decoration: 0;
 }
+
+.post-item
+{
+    background: #ffffff;
+    width: 296px;
+    height: 291px;
+    display: flex;
+    flex-direction: column;
+}
+
+.caption
+{
+    font: 12px/2.9 "Oxygen";
+    color: #999999;
+    background: #fcfcfc;
+    height: 48px;
+    border-top: 1px solid #efefef;
+    display: flex;
+    align-items: center;
+    padding: 0 13px;
+}
+
+.caption__author
+{
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.feedback__title
+{
+    font: 400 25px/1.2 "Oxygen";
+    color: #efefef;
+    text-align: center;
+}
+
+.footer
+{
+    background: #4D565D url(../images/footer\ photo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding-top: 81px;
+}
+
+.contact-form
+{
+    display: flex;
+    align-self: center;
+    margin: 0 0 90px 0;
+}
+
+.contact-form__email
+{
+    font: 400 12px/1.17 'Roboto';
+    color: #817F83;
+    width: 375px;
+    height: 50px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    padding: 0 0 0 35px;
+}
+
+.contact-form__button
+{
+    font: 400 12px/1.17 'Roboto';
+    color: #f8f8f8;
+    width: 125px;
+    height: 50px;
+    background: rgba(255, 255, 255, .28);
+    border: none;
+    border-radius: 0 3px 3px 0;
+}
+
+
+.footer__title
+{
+    color: #EFEFEF;
+    margin: 82px 0 20px;
+}
+
+.main-most-recent__name::after
+{
+    width: 188px;
+    height: 1px;
+    background: #dedede;
+    content: "";
+    display: block;
+    margin: 16px auto 0;
+}
+
+.main-featured-post__name::after
+{
+    width: 188px;
+    height: 1px;
+    background: #dedede;
+    content: "";
+    display: block;
+    margin: 16px auto 0;
+}
+
+.feedback__title::after
+{
+    width: 188px;
+    height: 1px;
+    background: #dedede;
+    content: "";
+    display: block;
+    margin: 16px auto 0;
+    margin-bottom: 20px;
+}
+
+

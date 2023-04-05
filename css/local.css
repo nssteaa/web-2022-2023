@@ -1,6 +1,66 @@
+.top-block
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.menu 
+{
+    width: 940px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+    align-items: center;
+    padding: 1px 250px 0;
+    color: #ffffff;
+}
+
+
+body
+{
+    margin: 0;
+}
+
+.content-title
+{
+    font: 400 50px/1 "Lora";
+    color: #2e2e2e;
+    margin: 120px 0 0 0;
+}
+
+.content-text
+{
+    font: 17px/1.5 "Oxygen";
+    color: rgba(46, 46, 46, 0.63);
+    margin: 20px 0 110px 0;
+}
+
+.content-image
+{
+    width: 100%;
+}
+
+.menu__logotype
+{
+    font: 400 26px/1 "Lora";
+    color: #ffffff;
+}
+
 .menu__logotype_color
 {
     color: #2e2e2e;
+}
+
+.menu__item
+{
+    font: 12px/1.7 "Oxygen";
+    color: #ffffff;
+    text-decoration: 0;
+    padding: 10px 20px;
 }
 
 .menu__item_color
@@ -9,36 +69,92 @@
     text-decoration: 0;
 }
 
-.content__title
-{
-    font: 400 50px/1 "Lora";
-    color: #2e2e2e;
-}
 
-.content__text
-{
-    font: 17px/1.18 "Oxygen";
-    color: rgba(46, 46, 46, 0.63);
-}
-
-.article-text
+.article
 {
     font: 24px/1.46 "Oxygen";
     color: #101315;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 250px 135px;
+    margin-top: 140px;
 }
 
-.low-block
+
+.feedback__title
 {
-    background: #000000 center/cover no-repeat url(../images/Конец-сайта-footer.jpg);
+    font: 400 25px/1.2 "Oxygen";
+    color: #efefef;
+    text-align: center;
 }
 
-.menu__logotype_with-background
+.footer
 {
-    color: #ffffff;
+    background: #4D565D url(../images/footer\ photo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding-top: 81px;
 }
 
-.menu__item_with-background
+.contact-form
 {
-    color: #ffffff;
-    text-decoration: 0;
+    display: flex;
+    align-self: center;
+    margin: 0 0 90px 0;
+}
+
+.contact-form__email
+{
+    font: 400 12px/1.17 'Roboto';
+    color: #817F83;
+    width: 375px;
+    height: 50px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    padding: 0 0 0 35px;
+}
+
+.contact-form__button
+{
+    font: 400 12px/1.17 'Roboto';
+    color: #f8f8f8;
+    width: 125px;
+    height: 50px;
+    background: rgba(255, 255, 255, .28);
+    border: none;
+    border-radius: 0 3px 3px 0;
+}
+
+
+.footer__title
+{
+    color: #EFEFEF;
+    margin: 82px 0 20px;
+}
+
+.feedback__title::after
+{
+    width: 188px;
+    height: 1px;
+    background: #dedede;
+    content: "";
+    display: block;
+    margin: 16px auto 0;
+    margin-bottom: 20px;
+}
+
+.menu_with-background
+{
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 0 0 100vw rgba(35, 47, 56, .6);
+    width: 100%;
+    background: rgba(35, 47, 56, 0.6);
+    padding: 31px 250px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box
 }
