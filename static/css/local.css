@@ -79,6 +79,7 @@ body
     align-items: center;
     padding: 0 250px 135px;
     margin-top: 140px;
+    white-space: pre-line;
 }
 
 
