@@ -62,7 +62,7 @@ type featuredPostData struct {
 		{
 			Title:       "The Road Ahead",
 			Subtitle:    "The road ahead might be paved - it might not be.",
-			ImgModifier: "post",
+			ImgModifier: "static/images/Северное-сияние.jpg",
 			Author:      "Mat Vogels",
 			AuthorImg:   "static/images/Mat-Vogels.png",
 			PublishDate: "September 25, 2015",
@@ -70,7 +70,7 @@ type featuredPostData struct {
 		{
 			Title:       "From Top Down",
 			Subtitle:    "Once a year, go someplace you’ve never been before.",
-			ImgModifier: "post post_second",
+			ImgModifier: "static/images/Небесные фонарики.jpg",
 			Author:      "William Wong",
 			AuthorImg:   "static/images/William-Wong.png",
 			PublishDate: "September 25, 2015",
