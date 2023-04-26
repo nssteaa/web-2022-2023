@@ -34,7 +34,7 @@
         <div class="main-featured-post">
             <h2 class="main-featured-post__name">Featured Posts</h2>
             {{range  .FeaturedPosts}}
-            <div class="{{  .ImgModifier}}">
+            <div class="post" style="background-image: url('{{ .PostImg }}');">
                 <h3 class="post__title">{{ .Title }}</h3>
                 <p class="post__text">{{ .Subtitle }}</p>
                 <div class="article-caption"> 

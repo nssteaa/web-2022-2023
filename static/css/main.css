@@ -132,7 +132,6 @@ body
 
 .post
 {
-background: url(../images/Северное-сияние.jpg);
 background-size: cover;
 height: 280px;
 width: 460px;
@@ -153,12 +152,6 @@ position: relative;
 .post__title
 {
     margin-bottom: 0;
-}
-
-.post_second
-{
-background: url(../images/Небесные-фонарики.jpg);
-background-size: cover;
 }
 
 .post__title

@@ -1,20 +1,37 @@
 package main
 
 import (
+	"database/sql"
 	"log"
-   "net/http"
+	"net/http"
+
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/jmoiron/sqlx"
+)
+
+const (
+	port         = ":3000"
+	dbDriverName = "mysql"
 )
 
 func main() {
-	const port = ":3000"
-    mux := http.NewServeMux() 
-    mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
-    mux.HandleFunc("/home", home)
-    mux.HandleFunc("/post", post)
-    err := http.ListenAndServe(port, mux) 
-    if err != nil {
-       log.Fatal(err)
-    }
+	db, err := openDB()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	dbx := sqlx.NewDb(db, dbDriverName) // Расширяем стандартный клиент к базе
+	mux := http.NewServeMux()
+	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
+	mux.HandleFunc("/home", home(dbx))
+	mux.HandleFunc("/post", post)
+	err = http.ListenAndServe(port, mux)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
 
-
+func openDB() (*sql.DB, error) {
+	// Здесь прописываем соединение к базе данных
+	return sql.Open(dbDriverName, "root:Xzcxdhnb1463@tcp(localhost:3306)/blog?charset=utf8mb4&collation=utf8mb4_unicode_ci&parseTime=true")
+}
