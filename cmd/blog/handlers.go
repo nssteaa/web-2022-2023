@@ -1,10 +1,13 @@
 package main
 
 import (
+	"database/sql"
 	"log"
 	"net/http"
+	"strconv"
 	"text/template"
 
+	"github.com/gorilla/mux"
 	"github.com/jmoiron/sqlx"
 )
 
@@ -14,6 +17,7 @@ type allPostsData struct {
 }
 
 type postData struct {
+	PostID      string `db:"id"`
 	Title       string `db:"title"`
 	Subtitle    string `db:"subtitle"`
 	PostImg     string `db:"image_url"`
@@ -23,10 +27,10 @@ type postData struct {
 }
 
 type generalPostData struct {
-	Title       string
-	Subtitle    string
-	PostImg     string
-	TextContent string
+	Title       string `db:"title"`
+	Subtitle    string `db:"subtitle"`
+	PostImg     string `db:"image_url"`
+	TextContent string `db:"content"`
 }
 
 func singlePost() generalPostData {
@@ -47,6 +51,7 @@ func singlePost() generalPostData {
 func featuredPosts(db *sqlx.DB) ([]postData, error) {
 	const query = `
 		SELECT
+			id,
 			title, 
 			subtitle, 
 			image_url,
@@ -68,9 +73,31 @@ func featuredPosts(db *sqlx.DB) ([]postData, error) {
 
 }
 
+// Получает информацию о конкретном посте из базы данных
+func generalPost(db *sqlx.DB, postID int) (generalPostData, error) {
+	const query = `
+		SELECT
+			title, 
+			subtitle, 
+			image_url,
+			content
+		FROM
+			post
+		WHERE id = ?
+	`
+	var posts generalPostData
+	err := db.Get(&posts, query, postID)
+	if err != nil {
+		return generalPostData{}, err
+	}
+
+	return posts, nil
+}
+
 func mostRecentPosts(db *sqlx.DB) ([]postData, error) {
 	const query = `
 		SELECT
+			id,
 			title, 
 			subtitle, 
 			image_url,
@@ -90,23 +117,40 @@ func mostRecentPosts(db *sqlx.DB) ([]postData, error) {
 	return posts, nil
 }
 
-func post(w http.ResponseWriter, r *http.Request) {
-	ts, err := template.ParseFiles("pages/post.html")
-	if err != nil {
-		http.Error(w, "Internal Server Error", 500)
-		log.Println(err.Error())
-		return
+func post(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
+	return func(w http.ResponseWriter, r *http.Request) {
+		postIDStr := mux.Vars(r)["postID"] // Получаем orderID в виде строки из параметров урла
+
+		postID, err := strconv.Atoi(postIDStr) // Конвертируем строку orderID в число
+		if err != nil {
+			if err == sql.ErrNoRows {
+				// sql.ErrNoRows возвращается, когда в запросе к базе не было ничего найдено
+				// В таком случае мы возвращем 404 (not found) и пишем в тело, что ордер не найден
+				http.Error(w, "Post not found", 404)
+				log.Println(err)
+				return
+			}
+
+			http.Error(w, "Invalid post id", 403)
+			log.Println(err)
+			return
+		}
+		post, err := generalPost(db, postID)
+		if err != nil {
+			http.Error(w, "Internal Server Error", 500)
+			log.Println(err.Error())
+			return
+		}
+
+		ts, err := template.ParseFiles("pages/post.html")
+
+		err = ts.Execute(w, post)
+		if err != nil {
+			http.Error(w, "Internal Server Error", 500)
+			log.Println(err)
+			return
+		}
 	}
-
-	data := singlePost()
-
-	err = ts.Execute(w, data)
-	if err != nil {
-		http.Error(w, "Internal Server Error", 500)
-		log.Println(err.Error())
-		return
-	}
-
 }
 
 func home(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
@@ -123,11 +167,7 @@ func home(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
 			log.Println(err.Error())
 			return
 		}
-		if err != nil {
-			http.Error(w, "Internal Server Error", 500)
-			log.Println(err.Error())
-			return
-		}
+
 		ts, err := template.ParseFiles("pages/index.html")
 		allPosts := allPostsData{
 			FeaturedPosts:   featuredPostsData,

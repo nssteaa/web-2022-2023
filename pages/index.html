@@ -35,7 +35,7 @@
             <h2 class="main-featured-post__name">Featured Posts</h2>
             {{range  .FeaturedPosts}}
             <div class="post" style="background-image: url('{{ .PostImg }}');">
-                <h3 class="post__title">{{ .Title }}</h3>
+                <a href="/post/{{ .PostID }}" + post.PostID class="post__title">{{ .Title }}</a>
                 <p class="post__text">{{ .Subtitle }}</p>
                 <div class="article-caption"> 
                     <img class="article-caption__photo" src="{{  .AuthorImg}}" alt="Mat Vogels">
@@ -51,7 +51,7 @@
             {{range  .MostRecentPosts}}
             <div class="post-item">
                 <img src="{{  .PostImg}}" alt="Balloons">
-                <h3 class="post-item__headline"> {{  .Title}}</h3>
+                <a href="/post/{{ .PostID }}" + post.PostID class="post-item__headline"> {{  .Title}}</a>
                 <p class="post-item__description"> {{  .Subtitle}}</p>
                 <div class="caption">
                     <img class="caption__photo" src= "{{  .AuthorImg}}" alt="William Wong">

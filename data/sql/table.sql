@@ -9,7 +9,7 @@ CREATE TABLE Post (
  subtitle VARCHAR(255),
  author VARCHAR(255),
  author_url VARCHAR(255),
- publish_date TIMESTAMP,
+ publish_date VARCHAR(255),
  image_url VARCHAR(255),
  featured TINYINT(1) DEFAULT 0,
  PRIMARY KEY (id)

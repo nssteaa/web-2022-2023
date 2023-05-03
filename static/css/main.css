@@ -129,19 +129,19 @@ body
 }
 
 
-
+ 
 .post
 {
-background-size: cover;
-height: 280px;
-width: 460px;
-border-radius: 3px;
-display: flex;
-flex-direction: column;
-justify-content: flex-end;
-align-items: flex-start;
-padding: 0 20px 20px 20px;
-position: relative;
+    background-size: cover;
+    height: 280px;
+    width: 460px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0 20px 20px 20px;
+    position: relative;
 }
 
 .post__text
@@ -149,13 +149,14 @@ position: relative;
     margin-top: 6px;
 }
 
-.post__title
+.post__title, .post-item__headline
 {
-    margin-bottom: 0;
+    text-decoration: 0;
 }
 
 .post__title
 {
+    margin-bottom: 0;
     font: 400 27px/1.1 "Lora";
     color: #ffffff;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Escape</title>
-    <link href="static/css/local.css" rel="stylesheet">
+    <link href="/static/css/local.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
@@ -20,12 +20,10 @@
         </div>
         <h1 class="content-title"> {{  .Title}}</h1>
         <p class="content-text"> {{  .Subtitle}}</p>
-        <img class="content-image" src="{{  .PostImg}}" alt="Северное сияние">
+        <img class="content-image" src="/{{ .PostImg }}" alt="Северное сияние">
     </header>
 
-    <p class="article">
-        {{  .TextContent}} 
-    </p>
+    <p class="article">{{  .TextContent}}</p>
 
     <footer class="footer">
         <span class="feedback__title">Stay in Touch</span>
