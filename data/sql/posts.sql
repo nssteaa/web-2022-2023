@@ -12,7 +12,7 @@ VALUES (
 	'My best post', 
     'Vasya Pupkin', 
 	'static/images/William-Wong.png', 
-	'2022 09 25',
+	'9/25/2015',
     'static/images/Воздушные-шары.jpg',
 	0
 );
@@ -31,7 +31,7 @@ VALUES (
 	'My post', 
     'Vasya Pupkin', 
 	'static/images/Mat-Vogels.png', 
-	'2012 09 05',
+	'9/21/2015',
     'static/images/Северное-сияние.jpg',
 	1
 );
@@ -50,7 +50,7 @@ VALUES (
 	'My second post', 
     'Lenya Gaidarov', 
 	'static/images/William-Wong.png', 
-	'2000 09 15',
+	'9/15/2000',
     'static/images/Небесные-фонарики.jpg',
 	1
 );
@@ -69,7 +69,7 @@ VALUES (
     'Just a post', 
     'Vasya Pupkin', 
     'static/images/William-Wong.png', 
-    '2021 01 29',
+    '8/19/2016',
     'static/images/Красный-мост.jpg',
     0
 );
@@ -88,7 +88,7 @@ VALUES (
     'My average post', 
     'Petr Petrovich', 
     'static/images/Mat-Vogels.png', 
-    '2022 09  01',
+    '3/18/2022',
     'static/images/Жёлтый-закат.jpg',
     0
 );
@@ -107,7 +107,7 @@ VALUES (
     'Super post', 
     'Vasya Pupkin', 
     'static/images/William-Wong.png', 
-    '2004 07 10',
+    '7/13/2021',
     'static/images/Море.jpg',
     0
 );
@@ -126,7 +126,7 @@ VALUES (
     'POST!!!!!!! my', 
     'Petr Petrovich', 
     'static/images/Mat-Vogels.png', 
-    '2022 09 25',
+    '9/15/2022',
     'static/images/Провода-в-туманности.jpg',
     0
 );
@@ -145,7 +145,7 @@ VALUES (
     'Not my post!', 
     'Vasya Pupkin', 
     'static/images/William-Wong.png', 
-    '2007 07 07',
+    '7/7/2015',
     'static/images/Челоек-у-водопада-с-радугой.jpg',
     0
 );
